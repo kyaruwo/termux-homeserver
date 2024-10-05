@@ -7,6 +7,7 @@
 ---
 
 ```bash
+
 pkg update && pkg upgrade
 
 pkg install proot-distro openssh syncthing neofetch
@@ -15,6 +16,7 @@ proot-distro install debian
 ```
 
 ```bash
+
 proot-distro login debian
 
 apt update && apt upgrade
@@ -28,6 +30,7 @@ logout
 ```
 
 ```bash
+
 sshd
 passwd
 pkill sshd
@@ -40,6 +43,7 @@ exit 0
 #### ssh
 
 ```bash
+
 sshd
 ```
 
@@ -48,6 +52,7 @@ sshd
 #### syncthing
 
 ```bash
+
 proot-distro login --user kyaruwo
 syncthing
 ```
@@ -57,6 +62,7 @@ syncthing
 #### neofetch
 
 ```bash
+
 proot-distro login --user kyaruwo
 neofetch
 logout
