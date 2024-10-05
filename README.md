@@ -17,8 +17,10 @@ proot-distro install debian
 ```
 
 ```bash
-
 proot-distro login debian
+```
+
+```bash
 
 apt update && apt upgrade
 
@@ -46,9 +48,7 @@ exit 0
 #### ssh
 
 ```bash
-
 sshd
-
 ```
 
 ---
