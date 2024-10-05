@@ -56,10 +56,11 @@ sshd
 #### syncthing
 
 ```bash
-
 proot-distro login --user kyaruwo
-syncthing
+```
 
+```
+syncthing
 ```
 
 ---
@@ -68,11 +69,4 @@ syncthing
 
 ```bash
 neofetch
-```
-
-```bash
-
-proot-distro login --user kyaruwo
-neofetch
-
 ```
