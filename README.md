@@ -6,14 +6,15 @@
 
 ---
 
-#### setup
-
 ```bash
 pkg update && pkg upgrade
 
 pkg install proot-distro openssh syncthing neofetch
 
 proot-distro install debian
+```
+
+```bash
 proot-distro login debian
 
 apt update && apt upgrade
@@ -24,7 +25,9 @@ adduser kyaruwo
 sudo sed -i "/^root/a\kyaruwo ALL=(ALL:ALL) ALL\n" /etc/sudoers
 
 logout
+```
 
+```
 sshd
 passwd
 pkill sshd
