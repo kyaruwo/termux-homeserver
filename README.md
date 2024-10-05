@@ -67,10 +67,12 @@ syncthing
 #### neofetch
 
 ```bash
+neofetch
+```
+
+```bash
 
 proot-distro login --user kyaruwo
-neofetch
-logout
 neofetch
 
 ```
