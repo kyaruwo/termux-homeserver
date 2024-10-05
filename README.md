@@ -56,7 +56,7 @@ sshd
 #### syncthing
 
 ```bash
-proot-distro login --user kyaruwo
+proot-distro login debian --user kyaruwo
 ```
 
 ```
