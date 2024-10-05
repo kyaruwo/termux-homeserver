@@ -27,7 +27,7 @@ sudo sed -i "/^root/a\kyaruwo ALL=(ALL:ALL) ALL\n" /etc/sudoers
 logout
 ```
 
-```
+```bash
 sshd
 passwd
 pkill sshd
