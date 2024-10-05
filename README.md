@@ -27,7 +27,7 @@ apt update && apt upgrade
 apt install adduser sudo
 
 adduser kyaruwo
-sudo sed -i "/^root/a\kyaruwo ALL=(ALL:ALL) ALL\n" /etc/sudoers
+sudo sed -i "/^root/a\kyaruwo ALL=(ALL:ALL) ALL" /etc/sudoers
 
 logout
 
