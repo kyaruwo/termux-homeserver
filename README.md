@@ -63,7 +63,7 @@ sshd
 
 ```bash
 # client
-ssh -p 8020 termux@hostip
+ssh -p 8022 termux@hostip
 ```
 
 ---
