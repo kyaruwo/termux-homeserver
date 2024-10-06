@@ -48,7 +48,8 @@ passwd
 ```bash
 
 pkill sshd
-exit 0
+
+logout
 
 ```
 
@@ -56,13 +57,15 @@ exit 0
 
 #### ssh
 
+host
+
 ```bash
-# host
 sshd
 ```
 
+client
+
 ```bash
-# client
 ssh -p 8022 host_ipaddress
 ```
 
