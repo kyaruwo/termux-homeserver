@@ -27,6 +27,11 @@ apt update && apt upgrade
 apt install adduser sudo
 
 adduser kyaruwo
+
+```
+
+```bash
+
 sudo sed -i "/^root/a\kyaruwo ALL=(ALL:ALL) ALL" /etc/sudoers
 
 logout
@@ -37,8 +42,12 @@ logout
 
 sshd
 passwd
-pkill sshd
 
+```
+
+```bash
+
+pkill sshd
 exit 0
 
 ```
@@ -48,7 +57,13 @@ exit 0
 #### ssh
 
 ```bash
+# host
 sshd
+```
+
+```bash
+# client
+ssh -p 8020 termux@hostip
 ```
 
 ---
