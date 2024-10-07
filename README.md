@@ -36,7 +36,7 @@ adduser kyaruwo
 
 ```bash
 
-sudo sed -i "/^root/a\kyaruwo ALL=(ALL:ALL) ALL" /etc/sudoers
+sed --in-place "/^root/a\kyaruwo ALL=(ALL:ALL) ALL" /etc/sudoers
 
 logout
 
