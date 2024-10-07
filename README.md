@@ -1,10 +1,16 @@
 # termux.config
 
-[termux v0.118.1](https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_universal.apk)
+<br />
+
+todo
+
+- [ ] setup ssh in debian
 
 <br />
 
-## init
+## installation
+
+[termux v0.118.1](https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_universal.apk)
 
 ```bash
 
