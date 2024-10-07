@@ -1,10 +1,14 @@
 # termux.config
 
+<br />
+
 #### prerequisite
 
 - [termux v0.118.1](https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_universal.apk)
 
----
+<br />
+
+## init
 
 ```bash
 
@@ -53,25 +57,25 @@ logout
 
 ```
 
----
+<br />
 
-#### ssh
+## ssh
 
-host
+- host
 
 ```bash
 sshd
 ```
 
-client
+- client
 
 ```bash
 ssh -p 8022 host_ipaddress
 ```
 
----
+<br />
 
-#### syncthing
+## syncthing
 
 ```bash
 proot-distro login debian --user kyaruwo
@@ -81,9 +85,9 @@ proot-distro login debian --user kyaruwo
 syncthing
 ```
 
----
+<br />
 
-#### neofetch
+## neofetch
 
 ```bash
 neofetch
