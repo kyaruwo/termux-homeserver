@@ -1,10 +1,6 @@
 # termux.config
 
-<br />
-
-## prerequisite
-
-- [termux v0.118.1](https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_universal.apk)
+[termux v0.118.1](https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_universal.apk)
 
 <br />
 
@@ -14,7 +10,7 @@
 
 pkg update && pkg upgrade
 
-pkg install proot-distro openssh syncthing neofetch
+pkg install proot-distro syncthing neofetch
 
 proot-distro install debian
 
@@ -35,42 +31,7 @@ adduser kyaruwo
 ```
 
 ```bash
-
 sed --in-place "/^root/a\kyaruwo ALL=(ALL:ALL) ALL" /etc/sudoers
-
-logout
-
-```
-
-```bash
-
-sshd
-passwd
-
-```
-
-```bash
-
-pkill sshd
-
-logout
-
-```
-
-<br />
-
-## ssh
-
-host
-
-```bash
-sshd -4
-```
-
-client
-
-```bash
-ssh -p 8022 host_ipaddress
 ```
 
 <br />
@@ -78,11 +39,11 @@ ssh -p 8022 host_ipaddress
 ## syncthing
 
 ```bash
-proot-distro login debian --user kyaruwo
+proot-distro login debian --user kyaruwo && syncthing
 ```
 
 ```
-syncthing
+http://127.0.0.1:8384
 ```
 
 <br />
