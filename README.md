@@ -61,13 +61,13 @@ logout
 
 ## ssh
 
-- host
+host
 
 ```bash
 sshd
 ```
 
-- client
+client
 
 ```bash
 ssh -p 8022 host_ipaddress
