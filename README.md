@@ -39,7 +39,11 @@ sed --in-place "/^root/a\kyaruwo ALL=(ALL:ALL) ALL" /etc/sudoers
 ## syncthing
 
 ```bash
-proot-distro login debian --user kyaruwo && syncthing
+proot-distro login debian --user kyaruwo
+```
+
+```bash
+syncthing
 ```
 
 ```
