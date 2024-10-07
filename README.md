@@ -64,7 +64,7 @@ logout
 host
 
 ```bash
-sshd
+sshd -4
 ```
 
 client
