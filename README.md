@@ -1,4 +1,4 @@
-# termux.config
+# termux homeserver
 
 <br />
 
