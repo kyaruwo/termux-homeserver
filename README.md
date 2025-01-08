@@ -2,58 +2,140 @@
 
 <br />
 
-## installation
+### prerequisite
 
 [termux v0.118.1](https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_universal.apk)
 
-```bash
+<br />
 
+<details><summary>installation</summary>
+
+<br />
+
+termux
+
+```bash
 pkg update && pkg upgrade
+```
 
-pkg install proot-distro syncthing neofetch
+distro
 
-proot-distro install debian
-
+```bash
+pkg i proot-distro
 ```
 
 ```bash
-proot-distro login debian
+pd i debian
 ```
 
-```bash
+login as root
 
+```bash
+pd login debian
+```
+
+debian (logged in as root)
+
+```bash
 apt update && apt upgrade
+```
 
-apt install adduser sudo
+packages (logged in as root)
 
+```bash
+apt install adduser sed sudo openssh-server tmux syncthing neofetch
+```
+
+user (logged in as root)
+
+```bash
 adduser kyaruwo
-
 ```
 
 ```bash
-sed --in-place "/^root/a\kyaruwo ALL=(ALL:ALL) ALL" /etc/sudoers
+sed -i "/^root/a\kyaruwo ALL=(ALL:ALL) ALL" /etc/sudoers
+```
+
+```bash
+logout
+```
+
+autologin as kyaruwo on debian when termux run
+
+```bash
+echo -e "\nclear\npd login debian --user kyaruwo" >> /data/data/com.termux/files/usr/etc/bash.bashrc
+```
+
+login as kyaruwo
+
+```bash
+pd login debian --user kyaruwo
+```
+
+ssh (logged in as kyaruwo)
+
+```bash
+ssh-keygen
+```
+
+```bash
+echo -e "\nPort 10122" >> /etc/ssh/sshd_config
+```
+
+```bash
+echo "HostKey /home/kyaruwo/.ssh/id_rsa" >> /etc/ssh/sshd_config
+```
+
+sshd (logged in as kyaruwo)
+
+```bash
+mkdir /run/sshd
+```
+
+```bash
+echo -e "\nalias sshd='sudo /usr/sbin/sshd'" >> ~/.bashrc
+```
+
+tmux on ssh (logged in as kyaruwo)
+
+```bash
+echo -e '\nif [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then\n\ttmux new -A -s owo\nfi' >> ~/.bashrc
 ```
 
 <br />
 
-## syncthing
+</details>
 
-```bash
-proot-distro login debian --user kyaruwo
-```
+<br />
+
+### syncthing
+
+start
 
 ```bash
 syncthing
 ```
 
+(web)GUI
+
 ```
-http://127.0.0.1:8384
+localhost:8384
 ```
 
 <br />
 
-## neofetch
+### ssh
+
+server
 
 ```bash
-neofetch
+sshd
 ```
+
+client
+
+```sh
+ssh -p 10122 kyaruwo@ip_address
+```
+
+<br />
